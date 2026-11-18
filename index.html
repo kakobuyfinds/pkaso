@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index, follow">
+<title>PikoBuy spreadsheet | Product Finds &amp; Buying Checklist</title>
+<meta name="description" content="Browse searchable HipoBuyFind listings in this independent PikoBuy spreadsheet. Compare listed CNY prices, check sizing and QC photos, and plan shipping.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PikoBuy spreadsheet | Product Finds &amp; Buying Checklist">
+<meta property="og:description" content="Search product finds by category or item ID and check what to confirm before you order.">
+<!-- Research reviewed: pikobuybestsheet.com (QC-led catalog), pikospreadsheets.net (buying and shipping guides), chinagrails.com/en/spreadsheet/agent/pikobuy (marketplace index). This page adds a searchable source snapshot with item IDs, listed CNY prices and a pre-order comparison checklist. Exact first-page Google positions were not verified. -->
+<!-- Deployment: add a self-referencing canonical using this page's final public HTTPS URL. Submission is pending publication and property verification. Submit the deployed URL through Google Search Console URL Inspection and Bing Webmaster Tools URL Submission. -->
+<style>
+:root{color-scheme:light;--ink:#142f29;--green:#145743;--paper:#f7f8f2;--line:#cad9ce}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+main,footer{width:min(68rem,calc(100% - 2rem));margin-inline:auto}
+header{margin:1rem 0 2.5rem;padding:clamp(2rem,7vw,5rem) 1rem;text-align:center;background:#153d32;color:#fff;border-radius:1.5rem}
+h1,h2{font-family:Georgia,serif;line-height:1.1}
+h1{font-size:clamp(2.6rem,8vw,5.3rem);margin:0}
+h2{font-size:clamp(1.75rem,4vw,2.5rem);margin:0 0 .6rem}
+header p{max-width:38rem;margin:1rem auto 1.5rem;color:#e1efe7}
+.button{display:inline-block;margin:.25rem;padding:.65rem 1.15rem;border:1px solid #ddf3a4;border-radius:2rem;color:#14382d;background:#ddf3a4;font-weight:700}
+.secondary{background:transparent;color:#fff}
+[hidden]{display:none!important}
+section{margin-block:2.5rem}
+a{color:var(--green);text-underline-offset:.2em}
+.filters{display:flex;flex-wrap:wrap;gap:.75rem 1rem;margin:1rem 0}
+label{display:grid;gap:.3rem;font-weight:650}
+label:first-child{flex:1 1 16rem}
+input,select{min-height:2.75rem;padding:.45rem .65rem;border:1px solid #778f82;border-radius:.5rem;background:white;color:var(--ink);font:inherit;width:100%}
+:focus-visible{outline:3px solid #a85b14;outline-offset:3px}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:.75rem;background:#fff}
+table{border-collapse:collapse;width:100%;min-width:34rem;text-align:left}
+th,td{padding:.75rem;border-bottom:1px solid var(--line)}
+thead{background:#e6eee6}
+tbody tr:last-child> *{border-bottom:0}
+td:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+details{padding:.8rem 0;border-bottom:1px solid var(--line)}
+summary{font-weight:650;cursor:pointer}
+footer{padding:1rem 0 2rem;border-top:1px solid var(--line)}
+</style>
+<link rel="canonical" href="https://kakobuyfinds.github.io/pkaso/">
+</head>
+<body>
+<main>
+<header>
+<h1>PikoBuy spreadsheet</h1>
+<p>Compare shoes, clothing and outerwear from HipoBuyFind. Search the catalog by product name or item ID, then check the current listing before you order.</p>
+<a class="button" href="https://hipobuyfind.com">PikoBuy spreadsheet</a>
+<a class="button secondary" href="https://hipobuyfind.com">Buy it now</a>
+</header>
+<section aria-labelledby="catalog">
+<h2 id="catalog">Product catalog</h2>
+<p>Source snapshot from <a href="https://hipobuyfind.com">HipoBuyFind</a>. Prices are listed in Chinese yuan (CNY) and can change. Check the source for current variants, stock and pricing.</p>
+<div class="filters" id="filters" hidden>
+<label>Search products<input id="query" type="search" placeholder="Product name or item ID"></label>
+<label>Category<select id="category"><option value="">All categories</option><option>Shoes</option><option>Hoodies &amp; sweaters</option><option>T-shirts</option><option>Jackets</option></select></label>
+</div>
+<p id="results" role="status" hidden></p>
+<div class="table-wrap" tabindex="0" role="region" aria-labelledby="catalog">
+<table>
+<thead><tr><th scope="col">Product</th><th scope="col">Category</th><th scope="col">Item ID</th><th scope="col">Listed CNY</th></tr></thead>
+<tbody id="items">
+<tr><th scope="row"><a href="https://hipobuyfind.com/goods-148188.html">Black canvas low-top sneakers</a></th><td>Shoes</td><td>148188</td><td>¥450.00</td></tr>
+<tr><th scope="row"><a href="https://hipobuyfind.com/goods-148189.html">Leather dress shoes</a></th><td>Shoes</td><td>148189</td><td>¥400.00</td></tr>
+<tr><th scope="row"><a href="https://hipobuyfind.com/goods-154936.html">Gray hoodie</a></th><td>Hoodies &amp; sweaters</td><td>154936</td><td>¥300.00</td></tr>
+<tr><th scope="row">Fleece-lined hoodie</th><td>Hoodies &amp; sweaters</td><td>154917</td><td>¥170.00</td></tr>
+<tr><th scope="row">Crewneck sweatshirt</th><td>Hoodies &amp; sweaters</td><td>154916</td><td>¥150.00</td></tr>
+<tr><th scope="row">Graphic short-sleeve T-shirt</th><td>T-shirts</td><td>154920</td><td>¥105.00</td></tr>
+<tr><th scope="row">Hooded quick-dry jacket</th><td>Jackets</td><td>154851</td><td>¥157.14</td></tr>
+<tr><th scope="row">Lightweight puffer jacket</th><td>Jackets</td><td>152572</td><td>¥268.00</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section aria-labelledby="checklist">
+<h2 id="checklist">Before you place an order</h2>
+<ol>
+<li><strong>Verify the listing.</strong> Match the item ID, color and size. Compare the seller’s measurements with a garment or pair of shoes you already own.</li>
+<li><strong>Check the source link.</strong> If you plan to use PikoBuy, copy the original seller URL and confirm that your agent accepts it and can order your selected variant.</li>
+<li><strong>Compare the delivered cost.</strong> Add the product price, domestic delivery, agent fees and international postage. Check whether the shipping quote uses actual or volumetric weight and whether import charges apply.</li>
+<li><strong>Review warehouse QC photos.</strong> If your agent offers inspection, check the size label, color and visible condition. Confirm the return deadline before approving dispatch.</li>
+</ol>
+</section>
+<section aria-labelledby="faq">
+<h2 id="faq">Frequently asked questions</h2>
+<details><summary>Where do these product links go?</summary><p>The catalog and both main buttons lead to HipoBuyFind. This independent page helps you compare listings before choosing how to order.</p></details>
+<details><summary>Are shipping and agent fees included in the listed price?</summary><p>The table shows the source’s item price in CNY. Confirm fees and shipping for your destination before paying.</p></details>
+<details><summary>Where can I see QC photos?</summary><p>Check the current listing for existing photos. If you order through an agent, ask whether inspection photos of your specific item are available before dispatch.</p></details>
+</section>
+</main>
+<footer>Independent shopping guide · Product data from HipoBuyFind</footer>
+<script>
+const query = document.querySelector('#query');
+const category = document.querySelector('#category');
+const results = document.querySelector('#results');
+const rows = Array.from(document.querySelector('#items').rows);
+
+function filterProducts() {
+  const terms = query.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  let count = 0;
+  for (const row of rows) {
+    const matchesCategory = !category.value || row.cells[1].textContent === category.value;
+    const text = row.textContent.toLowerCase();
+    row.hidden = !matchesCategory || !terms.every(term => text.includes(term));
+    if (!row.hidden) count += 1;
+  }
+  results.textContent = count
+    ? count + ' of ' + rows.length + ' products'
+    : 'No products match. Try another term or choose All categories.';
+}
+query.addEventListener('input', filterProducts);
+category.addEventListener('change', filterProducts);
+document.querySelector('#filters').hidden = false;
+results.hidden = false;
+filterProducts();
+</script>
+</body>
+</html>
